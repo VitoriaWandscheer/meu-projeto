@@ -134,8 +134,27 @@ git push origin main
 ![git merge + push final](assets/img-18.png)
 
 ## 8. Conteúdo extra: criação deste tutorial
+Crie e adicione um texto qualquer ao arquivo do tutorial:
+```bash
+echo "Laboratorio Prático - Git e Github" > laboratorio.md
+```
+Utilizando o editor de texto que preferir, escreva o conteúdo do tutorial utilizando a linguagem Markdown.
+Crie a pasta assets e adicione os prints capturados.
+Adicione os arquivos ao stage:
+```bash
+git add assets
+git add laboratorio.md
+```
+Faça o commit com uma mensagem descritiva:
+```bash
+git commit -m "Adiciona tutorial em Markdown com imagens do processo"
+```
+Envie para o repositório remoto:
+```bash
+git push origin main
+```
 ### Exemplo:
 ![criação do documento "laboratorio.md"](assets/img-19.png)
 ![Visual Studio Code com folder "meu-projeto" aberto](assets/img-22.png)
-![Adição dos arquivos ao git e push final](assets/img-20.png)
-![](assets/img-21.png)
+![Adiciona pasta assets ao git](assets/img-20.png)
+![Adição dos arquivos ao git e push final](assets/img-21.png)
