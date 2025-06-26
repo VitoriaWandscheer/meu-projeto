@@ -46,3 +46,34 @@ Depois de criar, copie a URL gerada.
 ### Exemplo:
 ![criação do repositório no GitHub](assets/img-4.png)
 ![criação do repositório no GitHub](assets/img-5.png)
+## 5. Conectar o Repositório Local ao GitHub
+### 5.1 Criar Token no GitHub
+Acesse as configurações do usuário no Github;
+No menu da esquerda, escolha a opção “< > Developer Settings”;
+Em “Personal access tokens”, selecione a opção “Fine-grained tokens”;
+Clique no botão "Generate new token";
+### Exemplo:
+![seleção da opção "Developer Settings"](assets/img-6.png)
+![acesso a área "Fine-grained tokens" em “Personal access tokens”](assets/img-7.png)
+
+Preencha os dados do projeto, sendo que é importante manter o "Expiration" como "No expiration".
+Além disso, em "Repository Access" marque a opção "Only select repositories" e selecione o repositório desejado, neste caso é o "meu-projeto".
+### Exemplo:
+![seleção da opção "Developer Settings"](assets/img-8.png)
+![acesso a área "Fine-grained tokens" em “Personal access tokens”](assets/img-9.png)
+
+<!-- CONTINUAR AQUI!!! -->
+
+### 5.2 Conctar Repositório
+Adicione o remoto:
+```bash
+git remote add origin https://github.com/seu-usuario/meu-projeto.git
+```
+Atenção: o passo 5.1 é essencial para realizar a autenticação, pois é necessário o Token de acesso para realizar qualquer comunicação com o Repositório Remoto.
+Envie para o GitHub:
+```bash
+git push -u origin main
+```
+### Exemplo:
+![seleção da opção "Developer Settings"](assets/img-12.png) <!-- editar esta imagem. Deixar apenas primeira linha -->
+![acesso a área "Fine-grained tokens" em “Personal access tokens”](assets/img-13.png)
