@@ -62,8 +62,8 @@ Clique no botão "Generate new token";
 Preencha os dados do projeto, sendo que é importante manter o "Expiration" como "No expiration".
 Além disso, em "Repository Access" marque a opção "Only select repositories" e selecione o repositório desejado, neste caso é o "meu-projeto".
 ### Exemplo:
-![dados do projeto preenchidos no token](assets/img-7.png)
-!["Only select repositores" selecionado](assets/img-8.png)
+![dados do projeto preenchidos no token](assets/img-7.png)  
+!["Only select repositores" selecionado](assets/img-8.png)  
 ![repositorio "meu-projeto" selecionado](assets/img-9.png)
 
 Em “Permissions”, “Repository permissions”, selecione a opção “access: Read and Write” na opção “Contents”.
@@ -88,12 +88,10 @@ Envie para o GitHub:
 ```bash
 git push -u origin main
 ```
+Neste momento você será direcionado para fazer login. Selecione a opção "token" e cole o "token" gerado no passo 5.1.
 ### Exemplo:
 ![renomeia branch para "main"](assets/img-12.png)
 ![início da conexão com repositório remoto](assets/img-13.png)
-
-Neste momento você será direcionado para fazer login. Selecione a opção "token" e cole o "token" gerado no passo 5.1.
-
 ![tela de Sign in](assets/img-14.png)
 ![tela de Sign in com token](assets/img-15.png)
 ![processo de conexão completo](assets/img-16.png)
