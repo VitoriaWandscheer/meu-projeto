@@ -67,9 +67,11 @@ Além disso, em "Repository Access" marque a opção "Only select repositories" 
 ![repositorio "meu-projeto" selecionado](assets/img-9.png)
 
 Em “Permissions”, “Repository permissions”, selecione a opção “access: Read and Write” na opção “Contents”.
+
 ![Access de "contents" definido como "Read and write"](assets/img-10.png)
 
 Por fim, clique em “Generate Token”.
+
 ![token para o repositório "meu-projeto" gerado](assets/img-11.png)
 
 ### 5.2 Conctar Repositório
@@ -91,6 +93,7 @@ git push -u origin main
 ![início da conexão com repositório remoto](assets/img-13.png)
 
 Neste momento você será direcionado para fazer login. Selecione a opção "token" e cole o "token" gerado no passo 5.1.
+
 ![tela de Sign in](assets/img-14.png)
 ![tela de Sign in com token](assets/img-15.png)
 ![processo de conexão completo](assets/img-16.png)
