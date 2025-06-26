@@ -1,4 +1,5 @@
 # Laboratório Prático - Git e Github
+
 ## 1. Configuração Inicial do Git
 Antes de começar, configure seu nome e e-mail no Git:
 ```bash
@@ -20,6 +21,7 @@ git init
 ```
 ### Exemplo:
 ![criação da pasta e git init](assets/img-2.png)
+
 ## 3. Adicionar Arquivos e Fazer Commit
 Crie o README.md:
 ```bash
@@ -35,6 +37,7 @@ git commit -m "Primeiro commit: adiciona README.md"
 ```
 ### Exemplo:
 ![criação do README e commit inicial](assets/img-3.png)
+
 ## 4. Criar um Repositório no GitHub
 ### 4.1 Vá até github.com
 ### 4.2 Clique em "New repository"
@@ -45,26 +48,33 @@ Não selecione nenhuma opção adicional (README, .gitignore etc.)
 Depois de criar, copie a URL gerada.
 ### Exemplo:
 ![criação do repositório no GitHub](assets/img-4.png)
-![criação do repositório no GitHub](assets/img-5.png)
+![url do repositório no GitHub](assets/img-5.png)
+
 ## 5. Conectar o Repositório Local ao GitHub
+
 ### 5.1 Criar Token no GitHub
 Acesse as configurações do usuário no Github;
 No menu da esquerda, escolha a opção “< > Developer Settings”;
 Em “Personal access tokens”, selecione a opção “Fine-grained tokens”;
 Clique no botão "Generate new token";
 ### Exemplo:
-![seleção da opção "Developer Settings"](assets/img-6.png)
-![acesso a área "Fine-grained tokens" em “Personal access tokens”](assets/img-7.png)
+![em "Developer Settings", acesso a área "Fine-grained tokens" em “Personal access tokens”](assets/img-6.png)
 Preencha os dados do projeto, sendo que é importante manter o "Expiration" como "No expiration".
 Além disso, em "Repository Access" marque a opção "Only select repositories" e selecione o repositório desejado, neste caso é o "meu-projeto".
 ### Exemplo:
-![seleção da opção "Developer Settings"](assets/img-8.png)
-![acesso a área "Fine-grained tokens" em “Personal access tokens”](assets/img-9.png)
+![dados do projeto preenchidos no token](assets/img-7.png)
+!["Only select repositores" selecionado](assets/img-8.png)
+![repositorio "meu-projeto" selecionado](assets/img-9.png)
 Em “Permissions”, “Repository permissions”, selecione a opção “access: Read and Write” na opção “Contents”.
-![acesso a área "Fine-grained tokens" em “Personal access tokens”](assets/img-10.png)
+![Access de "contents" definido como "Read and write"](assets/img-10.png)
 Por fim, clique em “Generate Token”.
-![acesso a área "Fine-grained tokens" em “Personal access tokens”](assets/img-11.png)
+![token para o repositório "meu-projeto" gerado](assets/img-11.png)
+
 ### 5.2 Conctar Repositório
+Caso a branch seja "master" renomeie para "main":
+```bash
+git branch -m master main
+```
 Adicione o remoto:
 ```bash
 git remote add origin https://github.com/seu-usuario/meu-projeto.git
@@ -75,5 +85,57 @@ Envie para o GitHub:
 git push -u origin main
 ```
 ### Exemplo:
-![seleção da opção "Developer Settings"](assets/img-12.png)
-![acesso a área "Fine-grained tokens" em “Personal access tokens”](assets/img-13.png)
+![renomeia branch para "main"](assets/img-12.png)
+![início da conexão com repositório remoto](assets/img-13.png)
+Neste momento você será direcionado para fazer login. Selecione a opção "token" e cole o "token" gerado no passo 5.1.
+![tela de Sign in](assets/img-14.png)
+![tela de Sign in com token](assets/img-15.png)
+![processo de conexão completo](assets/img-16.png)
+
+## 6. Criar e Trabalhar em uma Nova Branch
+Crie a nova branch:
+```bash
+git checkout -b feature/nova-funcionalidade
+```
+Crie o arquivo de funcionalidade:
+```bash
+echo "Nova funcionalidade em desenvolvimento" > nova-funcionalidade.txt
+```
+Adicione e comnit:
+```bash
+git add nova-funcionalidade.txt
+git commit -m "Adiciona nova funcionalidade"
+```
+Envie a branch:
+```bash
+git push -u origin feature/nova-funcionalidade
+```
+### Exemplo:
+![criação da branch, novo arquivo, commit e push](assets/img-17.png)
+
+## 7. Fazer Merge da Branch na Main
+Volte para main:
+```bash
+git checkout main
+```
+Atualize a main:
+```bash
+git pull origin main
+```
+Mescle:
+```bash
+git merge feature/nova-funcionalidade
+```
+Envie:
+```bash
+git push origin main
+```
+### Exemplo:
+![git merge + push final](assets/img-18.png)
+
+## 8. Conteúdo extra: criação deste tutorial
+### Exemplo:
+![criação do documento "laboratorio.md"](assets/img-19.png)
+![Visual Studio Code com folder "meu-projeto" aberto](assets/img-22.png)
+![Adição dos arquivos ao git e push final](assets/img-20.png)
+![](assets/img-21.png)
