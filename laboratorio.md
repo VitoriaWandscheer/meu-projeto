@@ -90,11 +90,11 @@ git push -u origin main
 ```
 Neste momento você será direcionado para fazer login. Selecione a opção "token" e cole o "token" gerado no passo 5.1.
 ### Exemplo:
-![renomeia branch para "main"](assets/img-12.png)
-![início da conexão com repositório remoto](assets/img-13.png)
-![tela de Sign in](assets/img-14.png)
-![tela de Sign in com token](assets/img-15.png)
-![processo de conexão completo](assets/img-16.png)
+![renomeia branch para "main"](assets/img-12.png)  
+![início da conexão com repositório remoto](assets/img-13.png)  
+![tela de Sign in](assets/img-14.png)  
+![tela de Sign in com token](assets/img-15.png)  
+![processo de conexão completo](assets/img-16.png)  
 
 ## 6. Criar e Trabalhar em uma Nova Branch
 Crie a nova branch:
